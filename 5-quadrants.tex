@@ -1,0 +1,26 @@
+\question[3]
+Let $\sin(\theta) = -\frac{3}{8}$, where $\pi < \theta < \frac{3\pi}{2}$. Find the \emph{exact} value of $\cos(\theta)$ and $\tan(\theta)$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2in]
+The angle $\pi < \theta < \frac{3\pi}{2}$ is in the third quadrant, so $\cos(\theta) < 0$ and $\tan(\theta) > 0$. The right triangle is
+\begin{center}
+	\begin{tikzpicture}[
+		scale=.5,
+	]
+	\coordinate (O) at (0,0);
+	\coordinate (A) at (0,-3);
+	\coordinate (B) at (-7.416,-3);
+	\draw[
+	    thick,
+	] (O) -- (A) -- (B) -- cycle;
+	\tkzLabelSegment[right=.25em](O,A){$3$}
+	\tkzLabelSegment[above left=.25em](O,B){$8$}
+	\tkzLabelSegment[below=.25em](A,B){$\sqrt{55}$}
+	\tkzMarkRightAngle[thick,size=.4](O,A,B)
+	\tkzLabelAngle[pos=2](A,B,O){$\theta$}
+	\end{tikzpicture}
+\end{center}
+Thus, $\cos(\theta) = -\frac{\sqrt{55}}{8}$ and $\tan(\theta) = \frac{3}{\sqrt{55}}$.
+\end{solutionorgrid}
+\end{EnvFullwidth}

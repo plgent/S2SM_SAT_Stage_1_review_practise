@@ -1,0 +1,43 @@
+\question
+
+\begin{parts}
+
+\part[2] % RS 7B, Q4c).
+Find integers $a$ and $b$ such that $\displaystyle{\frac{1}{(\sqrt{2} + 1)^2} = a + b\sqrt{2}}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[3.5in]
+We have
+\begin{align*}
+    \frac{1}{2 + 2\sqrt{2} + 1} &= \frac{1}{3 + 2\sqrt{2}} \times \frac{3 - 2\sqrt{2}}{3 - 2\sqrt{2}} \\
+    &= \frac{3 - 2\sqrt{2}}{9 \cancel{- 6\sqrt{12} + 6\sqrt{12}} - 4 \times 2} \\
+    &= \frac{3 - 2\sqrt{2}}{1}.
+\end{align*}
+Thus, $a = 3$ and $b = -2$.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[4] % RS 7B, Q10.
+Find rational numbers $p$ and $q$ such that $\displaystyle{\frac{2 - 3i}{2p + qi} = 3 + 2i}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[4in]
+We have
+\begin{align*}
+    \frac{2 - 3i}{2p + qi} &= 3 + 2i \\
+    2 - 3i &= (3 + 2i)(2p + qi) && (2p + qi \neq 0) \\
+    2 - 3i &= 6p + 3qi + 4pi + 2qi^2  \\
+    2 - 3i &= 2(3p - q) + i(4p + 3q).
+\end{align*}
+On comparing real and imaginary parts we get
+\begin{gather*}
+    \systeme{
+        3p - q = 1@\qquad(*),
+        4p + 3q = -3
+    }
+\end{gather*}
+then on multiplying (1) by $3$, then adding the equations yields $13p = 0$, so $p = 0$. Thus, $q = -1$.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

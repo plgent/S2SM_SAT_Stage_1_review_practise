@@ -1,0 +1,17 @@
+\question[4]
+Use Theorem~\ref{thm:sum-to-product-identities-for-sine} to find $\sin(3\theta) - \sin(\theta)$ and hence, prove Theorem~\ref{thm:triple-angle-formula-for-sine}.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[4.5in]
+\begin{proof}
+We have
+\begin{align*}
+	\sin(3\theta) - \sin(\theta) &= 2\cos\! \left( \frac{3\theta + \theta}{2} \right) \sin\! \left( \frac{3\theta - \theta}{2} \right) && (\textrm{By Theorem~\ref{thm:sum-to-product-identities-for-sine}}) \\
+	&= 2\cos(2\theta)\sin(\theta) \\
+	&= 2\sin(\theta)(1 - 2\sin^2(\theta)) \\
+	&= 2\sin(\theta) - 4\sin^3(\theta).
+\end{align*}
+Thus, $\sin(3\theta) = 3\sin(\theta) - 4\sin^3(\theta)$.
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}

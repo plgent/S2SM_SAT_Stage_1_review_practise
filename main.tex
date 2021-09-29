@@ -1,0 +1,171 @@
+\documentclass[
+    a4paper,
+    12pt,
+    addpoints,
+    % answers,
+    noanswers,
+    hidelinks,
+]
+{exam}
+
+%%% Packages and macros
+
+\usepackage{1-preamble}
+
+%%% Page layout
+
+\input{2-layout}
+
+%%% Subject, paper and conditions
+
+\newcommand{\subject}{Stage 2 Specialist Mathematics}
+\newcommand{\papername}{SAT: Stage 1 Review}
+\newcommand{\papernameshort}{Stage 1 Review}
+\newcommand{\timelimit}{$\infty$~Minutes}
+\newcommand{\conditions}{Notes, Calculator}
+\newcommand{\paperrules}{\timelimit, \conditions}
+
+\begin{document}
+
+% \input{3-cover-letter}
+
+\begin{questions}
+
+\ifprintanswers
+\else
+\fullwidth{You and your supervisor must \textbf{write your names} to agree that exam conditions were satisfied.}
+\fi
+
+%%% To add: proof of Thales' theorem; proof of law of sines using angle at the centre theorem.
+
+%%% Many of these trig problems have been taken from the old Haese Specialist Maths book.
+
+\input{5-quadrants}
+
+\threeast
+
+\input{5-tangent-definition}
+
+\triast
+
+\uplevel{
+\begin{definition}[General cosine function]
+\label{def:general-cosine-function}
+Let $A$, $B$, $C$, $D$ and $t$ be real numbers. Then the general cosine function is
+\[
+	f(t) = A\cos(B(t - C)) + D.
+\]
+\end{definition}
+}
+
+\input{5-general-cosine-function}
+
+\threeast
+
+\input{5-simple-trig-identities}
+
+\threeast
+
+\input{5-cofunction-geometry}
+
+\ifprintanswers
+\threeast
+\else
+\newpage
+\fi
+
+\input{5-trickier-trig-identities}
+
+\ifprintanswers
+\threeast
+\else
+\newpage
+\fi
+
+\uplevel{
+\begin{theorem}[Difference of sine squares]
+\label{thm:difference-of-sine-squares}
+Let $\theta$ and $\varphi$ be real numbers. Then
+\[
+	\sin^2(\theta) - \sin^2(\varphi) = \sin(\theta + \varphi)\sin(\theta - \varphi).
+\]
+\end{theorem}
+}
+
+\input{5-proof-of-difference-of-sine-squares}
+
+\triast
+
+\uplevel{
+\begin{theorem}[Sum of geometric sequence]
+\label{thm:sum-of-geometric-sequence}
+Let $r \neq 1$ be be a real number and let $n$ be a positive integer. Then
+\[
+    1 + r + r^2 + r^3 + \cdots + r^{n - 1} = \frac{r^n - 1}{r - 1}.
+\]
+Note that this could equivalently be written, using sigma summation notation, as
+\[
+    \sum_{j = 0}^{n - 1} r^j = \frac{r^n - 1}{r - 1}.
+\]
+\end{theorem}
+}
+
+\input{5-geometric-sequence-induction}
+
+\threeast
+
+\input{5-matrices-induction}
+
+\triast
+
+\uplevel{
+\begin{proposition}[Bisector is perpendicular]
+\label{prop:bisector-is-perpendicular}
+The line joining the apex to the midpoint of the base of an isosceles triangle is perpendicular to the base.
+\end{proposition}
+}
+
+\input{5-proof-of-midpoint-bisector}
+
+\ifprintanswers
+\threeast
+\else
+\fi
+
+\begin{theorem}[Law of sines]
+\label{thm:law-of-sines}
+Let triangle $ABC$ have sides of length $a$, $b$ and $c$ and angles $\alpha$, $\beta$ and $\gamma$. Let $R$ be the radius of the circumcircle of triangle $ABC$. Then we have
+\[
+    \frac{a}{\sin(\alpha)} = \frac{b}{\sin(\beta)} = \frac{c}{\sin(\gamma)} = 2R.
+\]
+\end{theorem}
+
+\input{5-proof-of-law-of-sines}
+
+\triast
+
+\uplevel{
+\begin{theorem}[Product of complex conjugates]
+\label{thm:product-of-complex-conjugates}
+Let $a$ and $b$ be real numbers and let $z = a + bi$ be a complex number. Then $\conj{z} = a - bi$ is the complex conjugate of $z$ and
+\[
+    z\conj{z} = \abs{z}^2.
+\]
+\end{theorem}
+}
+
+\input{5-modulus}
+
+\threeast
+
+\input{5-conjugates}
+
+\end{questions}
+
+\vfill
+
+\input{8-grading-table}
+
+\input{9-formulae-sheet}
+
+\end{document}

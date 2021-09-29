@@ -1,0 +1,26 @@
+\question[4]
+Prove Theorem~\ref{thm:difference-of-sine-squares}.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[5in]
+\begin{proof}
+Let $A = \sin(\theta + \varphi)$ and $B = \sin(\theta - \varphi)$. By the angle sum identities
+\[
+	A = \sin(\theta)\cos(\varphi) + \sin(\varphi)\cos(\theta),
+\]
+and
+\[
+	B = \sin(\theta)\cos(\varphi) - \sin(\varphi)\cos(\theta).
+\]
+Thus
+\begin{align*}
+	AB &= (\sin(\theta)\cos(\varphi) + \sin(\varphi)\cos(\theta)) \times (\sin(\theta)\cos(\varphi) - \sin(\varphi)\cos(\theta)) \\
+	&= (\sin(\theta)\cos(\varphi))^2 - \sin(\theta)\sin(\varphi)\cos(\theta)\cos(\varphi) + \sin(\theta)\sin(\varphi)\cos(\theta)\cos(\varphi) - (\sin(\varphi)\cos(\theta))^2 \\
+	&= \sin^2(\theta)\cos^2(\varphi) - \sin^2(\varphi)\cos^2(\theta) \\
+	&= \sin^2(\theta)(1 - \sin^2(\varphi)) - \sin^2(\varphi)(1 - \sin^2(\theta)) \\
+	&= \sin^2(\theta) - \sin^2(\theta)\sin^2(\varphi) - \sin^2(\varphi) + \sin^2(\theta)\sin^2(\varphi) \\
+	&= \sin^2(\theta) - \sin^2(\varphi).
+\end{align*}
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}

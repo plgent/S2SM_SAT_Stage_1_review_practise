@@ -1,0 +1,60 @@
+\question % Ex. 7I.2, Q5.
+
+\begin{parts}
+
+\part[3]
+Prove Theorem~\ref{thm:product-of-complex-conjugates}.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[3in]
+\begin{proof}
+The LHS is
+\begin{align*}
+    z\conj{z} &= (a + bi)(a - bi) \\
+    &= a^2 - b^2i^2 \\
+    &= a^2 + b^2.
+\end{align*}
+The RHS is
+\[
+    (\sqrt{a^2 + b^2})^2 = a^2 + b^2.
+\]
+This completes the proof.
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\uplevel{
+Let $w$ be a complex number such that $\abs{w} = 2\sqrt{10}$ and such that $w$ satisfies the equation
+\[
+    \frac{50}{\conj{w}} - \frac{10}{w} = 2 + 9i.
+\]
+}
+
+\ifprintanswers
+\else
+\newpage
+\fi
+\part[5]
+Find $w$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[4.5in]
+The LHS is
+\begin{align*}
+    \frac{50w - 10\conj{w}}{\conj{w}w} &= \frac{50w - 10\conj{w}}{\abs{w}^2} && (\textrm{By Theorem~\ref{thm:product-of-complex-conjugates}}) \\
+    &= \frac{50w - 10\conj{w}}{4 \times 10} && (\abs{w} = 2\sqrt{10}).
+\end{align*}
+Let $w = c + di$ so $\conj{w} = c - di$. Thus
+\begin{align*}
+    50w - 10\conj{w} &= 40(2 + 9i) \\
+    5(c + di) - (c - di) &= 4(2 + 9i) \\
+    4c + 6di &= 8 + 36i.
+\end{align*}
+By comparing real and imaginary parts
+\[
+    c = 2, \qquad d = 6.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

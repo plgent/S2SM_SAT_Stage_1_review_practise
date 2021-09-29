@@ -1,0 +1,42 @@
+\question
+
+\begin{parts}
+
+\part[5] % RS 6A, Q1c).
+Prove Theorem~\ref{thm:sum-of-geometric-sequence} by mathematical induction.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[4.5in]
+\begin{proof}
+$P(n)$ is: $\displaystyle{\sum_{j = 0}^{n - 1} r^j = \frac{r^n - 1}{r - 1}}$, for all $n \in \Z^+$.
+
+\textbf{Basis}: If $n = 1$, the LHS is $r^{1 - 1} = r^0 = 1$ and the RHS is $\displaystyle{\frac{r^1 - 1}{r - 1}} = 1$. So $P(1)$ is true.
+
+\textbf{Inductive step}: If $P(k)$ is true then $\displaystyle{\sum_{j = 0}^{k - 1} r^j = \frac{r^k - 1}{r - 1}}$, for all $k \in \Z^+$. Now,
+\begin{align*}
+    \sum_{j = 0}^k r^j &= \frac{r^k - 1}{r - 1} + r^{k} && (\textrm{by hypothesis}) \\
+    &= \frac{r^k - 1}{r - 1} + \frac{r^{k}(r - 1)}{(r - 1)} \\
+    &= \frac{r^k - 1 + r^{k + 1} - r^k}{r - 1} \\
+    &= \frac{r^{k + 1} - 1}{r - 1}.
+\end{align*}
+Since $P(1)$ is true and $P(k) \implies P(k + 1)$, by the PMI, $P(n)$ is true for all $n \in \Z^+$.
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[2]
+Hence, find $\displaystyle{1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots + \frac{1}{256} = \sum_{j = 0}^{8} \pfrac{1}{2}^{\! j}.}$ in the form $\displaystyle{\frac{m}{n}}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2.5in]
+By Theorem~\ref{thm:sum-of-geometric-sequence}, on putting $r = \frac{1}{2}$ and $n - 1 = 8$ we get
+\begin{align*}
+    \sum_{j = 0}^{8} \pfrac{1}{2}^{\! j} &= \frac{(\frac{1}{2})^9 - 1}{\frac{1}{2} - 1} \\
+    &= \frac{\frac{1}{512} - \frac{512}{512}}{-\frac{1}{2}} \\
+    &= \frac{-\frac{511}{512}}{-\frac{1}{2}} \\
+    &= \frac{511}{256}.
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

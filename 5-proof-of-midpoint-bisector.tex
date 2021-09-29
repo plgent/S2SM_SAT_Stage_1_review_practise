@@ -1,0 +1,77 @@
+\question % Ex. 3L, Q7.
+Consider isosceles triangle $OAB$ shown in Figure~\ref{fig:bisector-is-perpendicular}. Let $\vv{OA} = \vec{a}$ and $\vv{OB} = \vec{b}$.
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \tkzDefPoint(0,0){O}
+    \tkzDefShiftPoint[O](240:4.5){A}
+    \tkzDefShiftPoint[O](300:4.5){B}
+    \tkzDefMidPoint(A,B)
+    \tkzGetPoint{M}
+    \tkzLabelPoint[right](O){$O$}
+    \tkzLabelPoint[left](A){$A$}
+    \tkzLabelPoint[right](B){$B$}
+    \tkzLabelPoint[below](M){$M$}
+    \ifprintanswers
+    \tkzDrawSegments[vector,color=red](O,A O,B O,M A,B)
+    \tkzMarkSegment[mark=|,color=red](O,A)
+    \tkzMarkSegment[mark=|,color=red](O,B)
+    \tkzMarkSegment[mark=||,color=red](A,M)
+    \tkzMarkSegment[mark=||,color=red](B,M)
+    \tkzLabelSegment[pos=.6,left,color=red](O,A){$\vec{a}$}
+    \tkzLabelSegment[pos=.6,right,color=red](O,B){$\vec{b}$}
+    \tkzLabelSegment[pos=.6,left,color=red](O,M){$\vv{OM}$}
+    \else
+    \tkzMarkSegment[mark=|](O,A)
+    \tkzMarkSegment[mark=|](O,B)
+    \tkzMarkSegment[mark=||](A,M)
+    \tkzMarkSegment[mark=||](B,M)
+    \tkzDrawPolygon[semithick](O,A,B)
+    \tkzDrawPoint(M)
+    \fi
+    \end{tikzpicture}
+    \caption{Isosceles triangle $ABC$.}
+    \label{fig:bisector-is-perpendicular}
+\end{figure}
+
+\begin{parts}
+
+\part[1]
+Draw vector $\vv{OM}$ on Figure~\ref{fig:bisector-is-perpendicular}.
+
+\part[2]
+Find $\vv{AB}$ and $\vv{OM}$ in terms of $\vec{a}$ and $\vec{b}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2in]
+We have
+\[
+    \vv{AB} = \vec{b} - \vec{a},
+\]
+and
+\[
+    \vv{OM} = \vv{OA} + \frac{1}{2}\vv{AB} = \vec{a} + \frac{1}{2}(\vec{b} - \vec{a}) = \frac{1}{2}(\vec{b} + \vec{a}).
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[3]
+Hence, use vectors to prove Proposition~\ref{prop:bisector-is-perpendicular}.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2.5in]
+\begin{proof}
+We have
+\begin{align*}
+    \vv{OM} \cdot \vv{AB} &= \frac{1}{2}(\vec{b} + \vec{a}) \cdot (\vec{b} - \vec{a}) && (\textrm{by (b)}) \\
+    &= \frac{1}{2}(\vec{b} \cdot \vec{b} \cancel{- \vec{b} \cdot \vec{a} + \vec{a} \cdot \vec{b}} - \vec{a} \cdot \vec{a}) \\
+    &= \abs{\vec{b}}^2 - \abs{\vec{a}}^2 \\
+    &= 0 && (\triangle OAB \textrm{ is isosceles}).
+\end{align*}
+A zero dot product implies perpendicularity.
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

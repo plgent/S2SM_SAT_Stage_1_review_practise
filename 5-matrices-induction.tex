@@ -1,0 +1,146 @@
+\question % Ex. 6F, Q1.
+Let $n$ be a positive integer and let
+\[
+    \mat{A} =
+    \begin{pmatrix}
+        1 & 2 \\
+        0 & 1
+    \end{pmatrix}
+\]
+be a matrix.
+
+\begin{parts}
+
+\part[3]
+Find $\mat{A}^n$, for $n = 2$, $n = 3$ and $n = 4$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2.5in]
+For $n = 2$
+\[
+    \mat{A}^2
+    =
+    \begin{pmatrix}
+        1 & 2 \\
+        0 & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+        1 & 2 \\
+        0 & 1
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        1 & 4 \\
+        0 & 1
+    \end{pmatrix}.
+\]
+For $n = 3$
+\[
+    \mat{A}^3 = \mat{A}^2\mat{A}
+    =
+    \begin{pmatrix}
+        1 & 4 \\
+        0 & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+        1 & 2 \\
+        0 & 1
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        1 & 6 \\
+        0 & 1
+    \end{pmatrix}.
+\]
+For $n = 4$
+\[
+    \mat{A}^4 = \mat{A}^3\mat{A}
+    =
+    \begin{pmatrix}
+        1 & 6 \\
+        0 & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+        1 & 2 \\
+        0 & 1
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        1 & 8 \\
+        0 & 1
+    \end{pmatrix}.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[1]
+Make a conjecture about the value of $\mat{A}^n$, for all positive integers $n$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[.75in]
+\textbf{Conjecture}. For all $n \in \Z^+$ we have
+\[
+    \mat{A}^n =
+    \begin{pmatrix}
+        1 & 2n \\
+        0 & 1
+    \end{pmatrix}.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[5] % RS 6A, Q1c).
+Prove your conjecture in (b) by mathematical induction.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[4.5in]
+\begin{proof}
+$P(n)$ is:
+\[
+    \mat{A}^n =
+    \begin{pmatrix}
+        1 & 2n \\
+        0 & 1
+    \end{pmatrix}
+\]
+for all $n \in \Z^+$.
+
+\textbf{Basis}: If $n = 1$, the LHS is clearly equal to the RHS. So $P(1)$ is true.
+
+\textbf{Inductive step}: If $P(k)$ is true then
+\[
+    \mat{A}^k =
+    \begin{pmatrix}
+        1 & 2k \\
+        0 & 1
+    \end{pmatrix}
+\]
+for all $k \in \Z^+$. Now,
+\begin{align*}
+    \mat{A}^{k + 1} &= \mat{A}^k\mat{A} \\
+    &=
+    \begin{pmatrix}
+        1 & 2k \\
+        0 & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+        1 & 2 \\
+        0 & 1
+    \end{pmatrix} && (\textrm{by hypothesis}) \\
+    &=
+    \begin{pmatrix}
+        1 & 2 + 2k \\
+        0 & 1
+    \end{pmatrix} \\
+    &=
+    \begin{pmatrix}
+        1 & 2(k + 1) \\
+        0 & 1
+    \end{pmatrix}.
+\end{align*}
+Since $P(1)$ is true and $P(k) \implies P(k + 1)$, by the PMI, $P(n)$ is true for all $n \in Z^+$.
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

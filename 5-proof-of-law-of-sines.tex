@@ -1,0 +1,96 @@
+\question
+Theorem~\ref{thm:law-of-sines} will be proved using Figure~\ref{fig:law-of-sines} as a starting point. (\emph{Note}: we'll use side $a$ and angle $\alpha$ but the argument will apply equally well to the other side and angle pairs.)
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 5/2/B, 1/5/C}
+    \tkzDefCircle[circum](A,B,C)
+    \tkzGetPoint{O} \tkzGetLength{rO}
+    \tkzDefPointOnCircle[angle=-45,center=O,radius=\rO pt]
+    \tkzGetPoint{P}
+    \tkzDefMidPoint(B,C) \tkzGetPoint{M}
+    \tkzDrawPolygon[semithick](A,B,C)
+    \tkzDrawCircle[semithick](O,A)
+    \ifprintanswers
+    \tkzDrawSegment[dim={$a$,24pt,above=6pt}](C,B)
+    \tkzDrawSegments[semithick,color=brown](O,B O,C)
+    \tkzDrawSegment[semithick,color=blue](O,M)
+    \tkzDrawPoints(M)
+    \tkzMarkSegments[mark=|,color=brown](O,B O,C)
+    \tkzMarkSegments[pos=.75,mark=|,color=brown](O,P)
+    \tkzMarkSegments[mark=||,color=blue](B,M C,M)
+    \tkzMarkRightAngle[color=gray](B,M,O)
+    \tkzMarkAngles[size=20pt,mark=none,color=gray](B,A,C B,O,M)
+    \tkzLabelAngle[pos=.5](B,O,M){$\alpha$}
+    \tkzLabelPoint[above right](M){$M$}
+    \else
+    \fi
+    \tkzDrawSegment[dim={$a$,24pt,above=6pt}](C,B)
+    \tkzDrawSegments[semithick,color=brown](O,P)
+    \tkzDrawPoints(A,B,C,O,P)
+    \tkzLabelPoint[left](A){$A$}
+    \tkzLabelPoint[right](B){$B$}
+    \tkzLabelPoint[above](C){$C$}
+    \tkzLabelPoint[left](O){$O$}
+    \tkzLabelAngle[pos=.5](B,A,C){$\alpha$}
+    % \tkzLabelSegment[left](A,C){$b$}
+    % \tkzLabelSegment[below](A,B){$c$}
+    \tkzLabelSegment[pos=.75,color=brown](O,P){$R$}
+    \end{tikzpicture}
+    \caption{The circumcircle of triangle $ABC$ passes through its three vertices.}
+    \label{fig:law-of-sines}
+\end{figure}
+
+\begin{parts}
+
+\part[1]
+Form triangle $BOC$ by drawing line segments $BO$ and $CO$ on Figure~\ref{fig:law-of-sines}.
+
+\part[1]
+Find the measure of $\angle BOC$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[.75in]
+By the angle at the centre theorem, $\angle BOC = 2\alpha$.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[2]
+Let $M$ be the midpoint of line segment $BC$. Explain why $\angle OMB = \ang{90}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1in]
+Since $ABC$ is an isosceles triangle, the altitude has the midpoint as its foot.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[2]
+Explain why $\angle MOB = \alpha$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+The altitude of an isosceles triangle bisects the angle at the vertex. Thus,
+\[
+    \angle MOB = \frac{1}{2} \angle BOC = \alpha.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[2]
+Using these results, prove Theorem~\ref{thm:law-of-sines}.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2in]
+\begin{proof}
+Using the earlier results, in triangle $MOB$ we have
+\begin{align*}
+    \sin(\alpha) &= \frac{a/2}{R} \\
+    R\sin(\alpha) &= \frac{a}{2} \\
+    \frac{a}{\sin(\alpha)} &= 2R.
+\end{align*}
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

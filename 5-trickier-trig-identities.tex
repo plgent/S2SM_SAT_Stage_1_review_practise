@@ -1,0 +1,63 @@
+\question
+
+\begin{parts}
+
+\part
+Simplify:
+
+\begin{subparts}
+
+\subpart[2]
+$\csc(x) - \cos(x)\cot(x)$. (\emph{Hint}: $\cos^2(x) + \sin^2(x) = 1$.)
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+We have
+\begin{align*}
+	\csc(x) - \cos(x)\cot(x) &= \frac{1}{\sin(x)} - \cos(x) \frac{\cos(x)}{\sin(x)} \\
+	&= \frac{1 - \cos^2(x)}{\sin(x)} \\
+	&= \frac{\sin^2(x)}{\sin(x)} \\
+	&= \sin(x).
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\subpart[3]
+$\displaystyle{\frac{\sin(\theta) + \tan(\theta)}{1 + \cos(\theta)}}$. (\emph{Hint}: $\displaystyle{\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}}$.)
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[3in]
+We have
+\begin{align*}
+	\frac{\sin(\theta) + \tan(\theta)}{1 + \cos(\theta)} &= \frac{\sin(\theta) + \frac{\sin(\theta)}{\cos(\theta)}}{1 + \cos(\theta)} \\
+	&= \frac{\sin(\theta) \cos(\theta) + \sin(\theta)}{\cos(\theta)(1 + \cos(\theta))} \\
+	&= \frac{\sin(\theta) (\cancel{\cos(\theta) + 1)}}{\cos(\theta)(\cancel{1 + \cos(\theta)})} \\
+	&= \tan(\theta).
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{subparts}
+
+\part[3] %%% New Haese Ex 4F.3, Q3g).
+Show that $\displaystyle{\frac{\cos(\alpha)}{1 - \tan(\alpha)} + \frac{\sin(\alpha)}{1 - \cot(\alpha)} = \cos(\alpha)} + \sin(\alpha)$. (\emph{Hint}: difference of two squares.)
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[3.25in]
+The LHS is
+\begin{align*}
+    \frac{\cos(\alpha)}{1 - \frac{\sin(\alpha)}{\cos(\alpha)}} + \frac{\sin(\alpha)}{1 - \frac{\cos(\alpha)}{\sin(\alpha)}}
+    &=
+    \frac{\cos(\alpha)}{\frac{\cos(\alpha) - \sin(\alpha)}{\cos(\alpha)}} + \frac{\sin(\alpha)}{\frac{\sin(\alpha) - \cos(\alpha)}{\sin(\alpha)}} \\
+    &=
+    \frac{\cos^2(\alpha)}{\cos(\alpha) - \sin(\alpha)} + \frac{\sin^2(\alpha)}{\sin(\alpha) - \cos(\alpha)} \\
+    &=
+    \frac{\cos^2(\alpha)}{\cos(\alpha) - \sin(\alpha)} - \frac{\sin^2(\alpha)}{\cos(\alpha) - \sin(\alpha)} \\
+    &=
+    \frac{\cancel{(\cos(\alpha) - \sin(\alpha))}(\cos(\alpha) + \sin(\alpha))}{\cancel{(\cos(\alpha) - \sin(\alpha))}},
+\end{align*}
+which is the RHS.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}
